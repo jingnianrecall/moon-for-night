@@ -19,6 +19,10 @@ export default defineUserConfig({
             link: '/01.WEB/JavaScript'
           },
           {
+            text: 'ES6',
+            link: '/01.WEB/ES6'
+          },
+          {
             text: 'HTML',
             link: '/01.WEB/HTML'
           }
@@ -72,6 +76,28 @@ export default defineUserConfig({
               text: '继承与原型链',
               link: '/01.WEB/JavaScript/继承与原型链.md',
             },
+          ],
+        },
+      ],
+      '/01.WEB/ES6': [
+        // SidebarItem
+        {
+          text: 'ES6',
+          children: [
+            // SidebarItem
+            {
+              text: 'Promise 对象',
+              link: '/01.WEB/ES6/Promise 对象.md',
+            },
+            {
+              text: 'Generator 函数',
+              link: '/01.WEB/ES6/Generator 函数.md',
+            },
+            {
+              text: 'Async 函数',
+              link: '/01.WEB/ES6/Async 函数.md',
+            },
+
           ],
         },
       ],
