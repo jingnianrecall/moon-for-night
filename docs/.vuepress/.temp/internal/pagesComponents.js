@@ -19,14 +19,32 @@ export const pagesComponents = {
   "v-36d6de28": defineAsyncComponent(() => import(/* webpackChunkName: "v-36d6de28" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/HTML/Web Workers.html.vue")),
   // path: /01.WEB/ES6/Async%20%E5%87%BD%E6%95%B0.html
   "v-94d60128": defineAsyncComponent(() => import(/* webpackChunkName: "v-94d60128" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/ES6/Async 函数.html.vue")),
+  // path: /01.WEB/ES6/Class%20%E7%B1%BB%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95.html
+  "v-398008fa": defineAsyncComponent(() => import(/* webpackChunkName: "v-398008fa" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/ES6/Class 类的基本语法.html.vue")),
+  // path: /01.WEB/ES6/Decorator%20%E8%A3%85%E9%A5%B0%E5%99%A8.html
+  "v-468801ca": defineAsyncComponent(() => import(/* webpackChunkName: "v-468801ca" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/ES6/Decorator 装饰器.html.vue")),
   // path: /01.WEB/ES6/Generator%20%E5%87%BD%E6%95%B0.html
   "v-410e17fa": defineAsyncComponent(() => import(/* webpackChunkName: "v-410e17fa" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/ES6/Generator 函数.html.vue")),
+  // path: /01.WEB/ES6/Generator%20%E5%87%BD%E6%95%B0%E7%9A%84%E5%BC%82%E6%AD%A5%E5%BA%94%E7%94%A8.html
+  "v-1460fd49": defineAsyncComponent(() => import(/* webpackChunkName: "v-1460fd49" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/ES6/Generator 函数的异步应用.html.vue")),
   // path: /01.WEB/ES6/Promise%20%E5%AF%B9%E8%B1%A1.html
   "v-b043306e": defineAsyncComponent(() => import(/* webpackChunkName: "v-b043306e" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/ES6/Promise 对象.html.vue")),
   // path: /01.WEB/ES6/
   "v-f24a7ad4": defineAsyncComponent(() => import(/* webpackChunkName: "v-f24a7ad4" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/ES6/index.html.vue")),
+  // path: /01.WEB/ES6/%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A9%E5%B1%95.html
+  "v-6d12323f": defineAsyncComponent(() => import(/* webpackChunkName: "v-6d12323f" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/ES6/函数的扩展.html.vue")),
+  // path: /01.WEB/ES6/%E5%8F%98%E9%87%8F%E7%9A%84%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC.html
+  "v-33904925": defineAsyncComponent(() => import(/* webpackChunkName: "v-33904925" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/ES6/变量的解构赋值.html.vue")),
+  // path: /01.WEB/ES6/%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9Flet%E5%92%8Cconst.html
+  "v-5f45fc24": defineAsyncComponent(() => import(/* webpackChunkName: "v-5f45fc24" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/ES6/块级作用域let和const.html.vue")),
+  // path: /01.WEB/ES6/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%89%A9%E5%B1%95.html
+  "v-a684a2d2": defineAsyncComponent(() => import(/* webpackChunkName: "v-a684a2d2" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/ES6/字符串的扩展.html.vue")),
   // path: /01.WEB/JavaScript/01.%E7%AE%80%E4%BB%8B.html
   "v-9eacc8e8": defineAsyncComponent(() => import(/* webpackChunkName: "v-9eacc8e8" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/JavaScript/01.简介.html.vue")),
+  // path: /01.WEB/JavaScript/JavaScript%E5%B8%B8%E7%94%A8%E7%9A%84%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95.html
+  "v-5ccaa860": defineAsyncComponent(() => import(/* webpackChunkName: "v-5ccaa860" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/JavaScript/JavaScript常用的数组方法.html.vue")),
+  // path: /01.WEB/JavaScript/JavaScript%E7%9A%84%E9%97%AD%E5%8C%85.html
+  "v-7a6131b6": defineAsyncComponent(() => import(/* webpackChunkName: "v-7a6131b6" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/JavaScript/JavaScript的闭包.html.vue")),
   // path: /01.WEB/JavaScript/JavaScript%E7%BB%A7%E6%89%BF%E7%9A%84%E5%A4%9A%E7%A7%8D%E6%96%B9%E5%BC%8F.html
   "v-e23b17b6": defineAsyncComponent(() => import(/* webpackChunkName: "v-e23b17b6" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/JavaScript/JavaScript继承的多种方式.html.vue")),
   // path: /01.WEB/JavaScript/JavaScript%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6.html

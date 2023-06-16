@@ -13,7 +13,7 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="三、地心坐标系转经纬高" tabindex="-1"><a class="header-anchor" href="#三、地心坐标系转经纬高" aria-hidden="true">#</a> 三、地心坐标系转经纬高</h2>
 <div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token doc-comment comment">/**
- * 地心坐标系转经纬高
+ * 地心坐标系转经纬高(xyz to llh)
  * <span class="token keyword">@param</span> <span class="token class-name"><span class="token punctuation">{</span><span class="token operator">*</span><span class="token punctuation">}</span></span> <span class="token parameter">ecef</span>
  * <span class="token keyword">@returns</span>
  */</span>

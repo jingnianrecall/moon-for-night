@@ -1,0 +1,14 @@
+export const data = JSON.parse("{\"key\":\"v-398008fa\",\"path\":\"/01.WEB/ES6/Class%20%E7%B1%BB%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95.html\",\"title\":\"Class 类的基本语法\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"Class 类的基本语法\",\"date\":\"2023-05-09T13:49:16.000Z\",\"categories\":[\"JavaScript\"],\"tags\":[\"JavaScript\"],\"author\":{\"name\":\"zhang\"}},\"headers\":[{\"level\":2,\"title\":\"一、类的由来\",\"slug\":\"一、类的由来\",\"link\":\"#一、类的由来\",\"children\":[]},{\"level\":2,\"title\":\"二、基本使用\",\"slug\":\"二、基本使用\",\"link\":\"#二、基本使用\",\"children\":[{\"level\":3,\"title\":\"constructor 方法\",\"slug\":\"constructor-方法\",\"link\":\"#constructor-方法\",\"children\":[]},{\"level\":3,\"title\":\"类的实例\",\"slug\":\"类的实例\",\"link\":\"#类的实例\",\"children\":[]},{\"level\":3,\"title\":\"实例属性的新写法\",\"slug\":\"实例属性的新写法\",\"link\":\"#实例属性的新写法\",\"children\":[]},{\"level\":3,\"title\":\"取值函数（getter）和存值函数（setter）\",\"slug\":\"取值函数-getter-和存值函数-setter\",\"link\":\"#取值函数-getter-和存值函数-setter\",\"children\":[]},{\"level\":3,\"title\":\"表达式定义\",\"slug\":\"表达式定义\",\"link\":\"#表达式定义\",\"children\":[]},{\"level\":3,\"title\":\"静态方法\",\"slug\":\"静态方法\",\"link\":\"#静态方法\",\"children\":[]},{\"level\":3,\"title\":\"静态属性\",\"slug\":\"静态属性\",\"link\":\"#静态属性\",\"children\":[]},{\"level\":3,\"title\":\"私有方法和私有属性\",\"slug\":\"私有方法和私有属性\",\"link\":\"#私有方法和私有属性\",\"children\":[]}]},{\"level\":2,\"title\":\"三、Class类 的注意点\",\"slug\":\"三、class类-的注意点\",\"link\":\"#三、class类-的注意点\",\"children\":[]},{\"level\":2,\"title\":\"四、Class 的继承\",\"slug\":\"四、class-的继承\",\"link\":\"#四、class-的继承\",\"children\":[{\"level\":3,\"title\":\"为什么子类的构造函数，一定要调用super()？\",\"slug\":\"为什么子类的构造函数-一定要调用super\",\"link\":\"#为什么子类的构造函数-一定要调用super\",\"children\":[]},{\"level\":3,\"title\":\"私有属性和私有方法的继承\",\"slug\":\"私有属性和私有方法的继承\",\"link\":\"#私有属性和私有方法的继承\",\"children\":[]},{\"level\":3,\"title\":\"super 关键字\",\"slug\":\"super-关键字\",\"link\":\"#super-关键字\",\"children\":[]},{\"level\":3,\"title\":\"类的 prototype 属性和__proto__属性\",\"slug\":\"类的-prototype-属性和-proto-属性\",\"link\":\"#类的-prototype-属性和-proto-属性\",\"children\":[]},{\"level\":3,\"title\":\"Mixin 模式的实现\",\"slug\":\"mixin-模式的实现\",\"link\":\"#mixin-模式的实现\",\"children\":[]}]},{\"level\":2,\"title\":\"五、Babel 是如何编译 Class 的\",\"slug\":\"五、babel-是如何编译-class-的\",\"link\":\"#五、babel-是如何编译-class-的\",\"children\":[]},{\"level\":2,\"title\":\"六、总结\",\"slug\":\"六、总结\",\"link\":\"#六、总结\",\"children\":[]}],\"git\":{\"updatedTime\":null,\"contributors\":[]},\"filePathRelative\":\"01.WEB/ES6/Class 类的基本语法.md\"}")
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}
