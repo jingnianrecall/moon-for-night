@@ -1,5 +1,5 @@
 ---
-title: ES6面试题
+title: ES6
 date: 2023-05-09 13:49:16
 # permalink: /pages/0796ba76b4b55368
 categories:
@@ -27,13 +27,17 @@ author:
 
 ### 4. Symbol
 
+答：
+
 ### 5. Set 和 Map
+
+答：
 
 ### 6. for of
 
 ### 7. 解构赋值
 
-
+答：
 
 ### 8. 增强的对象字面量
 

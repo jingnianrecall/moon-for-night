@@ -29,34 +29,24 @@ export default defineUserConfig({
         ]
       },
       {
-        text: 'GIS',
+        text: '做个',
         children: [
           {
-            text: '记录',
-            link: '/02.GIS/记录/Cesium调用GeoServer服务.md'
+            text: 'Notes',
+            link: '/02.GIS/Notes'
           },
+        ]
+      },
+      {
+        text: '废人',
+        children: [
           {
-            text: 'HTML',
-            link: '/02.GIS/HTML'
+            text: '混碗饭',
+            link: '/01.WEB/Jobs'
           }
         ]
       },
     ],
-    // sidebar: [
-    //   // SidebarItem
-    //   {
-    //     text: 'JavaScript',
-    //     link: '/javaScript/',
-    //     children: [
-    //       // SidebarItem
-    //       {
-    //         text: '简介',
-    //         link: '/JavaScript/01.简介.md',
-    //         children: [],
-    //       },
-    //     ],
-    //   },
-    // ]
     sidebar: {
       '/01.WEB/JavaScript': [
         // SidebarItem
@@ -73,6 +63,10 @@ export default defineUserConfig({
               link: '/01.WEB/JavaScript/JavaScript常用的数组方法.md',
             },
             {
+              text: 'JavaScript常用字符串方法',
+              link: '/01.WEB/JavaScript/JavaScript常用字符串方法.md',
+            },
+            {
               text: 'JavaScript运行机制',
               link: '/01.WEB/JavaScript/JavaScript运行机制.md',
             },
@@ -87,7 +81,7 @@ export default defineUserConfig({
             {
               text: 'JavaScript继承的多种方式',
               link: '/01.WEB/JavaScript/JavaScript继承的多种方式.md',
-            },
+            }
           ],
         },
       ],
@@ -114,6 +108,14 @@ export default defineUserConfig({
               link: '/01.WEB/ES6/函数的扩展.md',
             },
             {
+              text: 'Symbol',
+              link: '/01.WEB/ES6/Symbol.md',
+            },
+            {
+              text: '迭代器与 for of 循环',
+              link: '/01.WEB/ES6/迭代器与 for of 循环.md',
+            },
+            {
               text: 'Promise 对象',
               link: '/01.WEB/ES6/Promise 对象.md',
             },
@@ -136,25 +138,49 @@ export default defineUserConfig({
           ],
         },
       ],
-      '/HTML/': [
-        {
-          text: 'HTML',
-          children: ['/reference/cli.md', '/reference/config.md'],
-        },
-      ],
-      '/02.GIS/记录': [
+      '/01.WEB/HTML': [
         // SidebarItem
         {
-          text: '记录',
+          text: 'HTML',
+          children: [
+            // SidebarItem
+            {
+              text: 'Web Workers',
+              link: '/01.WEB/HTML/Web Workers.md',
+            }
+          ],
+        },
+      ],
+      '/01.WEB/Jobs': [
+        // SidebarItem
+        {
+          text: '混碗饭',
+          children: [
+            // SidebarItem
+            {
+              text: 'JavaScript',
+              link: '/01.WEB/Jobs/JavaScript.md',
+            },
+            {
+              text: 'ES6',
+              link: '/01.WEB/Jobs/ES6.md',
+            },
+          ],
+        },
+      ],
+      '/02.GIS/Notes': [
+        // SidebarItem
+        {
+          text: 'Notes',
           children: [
             // SidebarItem
             {
               text: 'Cesium调用GeoServer服务',
-              link: '/02.GIS/记录/Cesium调用GeoServer服务.md',
+              link: '/02.GIS/Notes/Cesium调用GeoServer服务.md',
             },
             {
-              text: '语法和数据类型',
-              link: '/02.GIS/记录/GeoServer发布Tif格式影像文件.md',
+              text: 'GeoServer发布Tif格式影像文件',
+              link: '/02.GIS/Notes/GeoServer发布Tif格式影像文件.md',
             },
           ],
         },
