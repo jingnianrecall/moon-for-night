@@ -44,4 +44,5 @@ export const pagesRoutes = [
   ["v-22dd1fdf","/02.GIS/%E8%B5%84%E6%BA%90/%E7%BD%91%E7%AB%99.html",{"title":"网站"},["/02.GIS/资源/网站.html","/02.GIS/%E8%B5%84%E6%BA%90/%E7%BD%91%E7%AB%99","/02.GIS/资源/网站.md","/02.GIS/%E8%B5%84%E6%BA%90/%E7%BD%91%E7%AB%99.md"]],
   ["v-3e6568c5","/01.WEB/Vue/%E8%AE%B0%E5%BD%95/Element-ui%E7%9B%B8%E5%85%B3.html",{"title":""},["/01.WEB/Vue/记录/Element-ui相关.html","/01.WEB/Vue/%E8%AE%B0%E5%BD%95/Element-ui%E7%9B%B8%E5%85%B3","/01.WEB/Vue/记录/Element-ui相关.md","/01.WEB/Vue/%E8%AE%B0%E5%BD%95/Element-ui%E7%9B%B8%E5%85%B3.md"]],
   ["v-3706649a","/404.html",{"title":""},["/404"]],
+  ["v-72cb1a27","/02.GIS/Notes/Cesium%E7%B2%92%E5%AD%90%E7%89%B9%E6%95%88-%E7%83%9F%E9%9B%BE.html",{"title":"Cesium粒子特效-烟雾"},["/02.GIS/Notes/Cesium粒子特效-烟雾.html","/02.GIS/Notes/Cesium%E7%B2%92%E5%AD%90%E7%89%B9%E6%95%88-%E7%83%9F%E9%9B%BE","/02.GIS/Notes/Cesium粒子特效-烟雾.md","/02.GIS/Notes/Cesium%E7%B2%92%E5%AD%90%E7%89%B9%E6%95%88-%E7%83%9F%E9%9B%BE.md"]],
 ]

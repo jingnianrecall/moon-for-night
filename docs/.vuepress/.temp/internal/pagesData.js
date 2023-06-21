@@ -89,4 +89,6 @@ export const pagesData = {
   "v-3e6568c5": () => import(/* webpackChunkName: "v-3e6568c5" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/Vue/记录/Element-ui相关.html.js").then(({ data }) => data),
   // path: /404.html
   "v-3706649a": () => import(/* webpackChunkName: "v-3706649a" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/404.html.js").then(({ data }) => data),
+  // path: /02.GIS/Notes/Cesium%E7%B2%92%E5%AD%90%E7%89%B9%E6%95%88-%E7%83%9F%E9%9B%BE.html
+  "v-72cb1a27": () => import(/* webpackChunkName: "v-72cb1a27" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/02.GIS/Notes/Cesium粒子特效-烟雾.html.js").then(({ data }) => data),
 }
