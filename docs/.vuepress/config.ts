@@ -23,6 +23,10 @@ export default defineUserConfig({
             link: '/01.WEB/ES6'
           },
           {
+            text: 'Vue',
+            link: '/01.WEB/Vue'
+          },
+          {
             text: 'HTML',
             link: '/01.WEB/HTML'
           }
@@ -71,7 +75,11 @@ export default defineUserConfig({
               link: '/01.WEB/JavaScript/JavaScript运行机制.md',
             },
             {
-              text: '作用域与闭包',
+              text: 'JavaScript作用域',
+              link: '/01.WEB/JavaScript/JavaScript作用域.md',
+            },
+            {
+              text: 'JavaScript的闭包',
               link: '/01.WEB/JavaScript/JavaScript的闭包.md',
             },
             {
@@ -135,6 +143,63 @@ export default defineUserConfig({
               text: 'Class 类的基本语法',
               link: '/01.WEB/ES6/Class 类的基本语法.md',
             },
+            {
+              text: 'Proxy',
+              link: '/01.WEB/ES6/Proxy.md',
+            },
+          ],
+        },
+      ],
+      '/01.WEB/Vue': [
+        // SidebarItem
+        {
+          text: 'Vue',
+          children: [
+            // SidebarItem
+            {
+              text: '01.Vue 生命周期',
+              link: '/01.WEB/Vue/01.Vue生命周期.md',
+            },
+            {
+              text: '02.Vue 组件之间通信方式',
+              link: '/01.WEB/Vue/02.Vue组件之间通信方式.md',
+            },
+            {
+              text: '03.Vue 中的响应性是如何工作的',
+              link: '/01.WEB/Vue/03.Vue 中的响应性是如何工作的.md',
+            },
+            {
+              text: '04.虚拟DOM实现原理',
+              link: '/01.WEB/Vue/04.虚拟DOM实现原理.md',
+            },
+            // {
+            //   text: 'Symbol',
+            //   link: '/01.WEB/Vue/Symbol.md',
+            // },
+            // {
+            //   text: '迭代器与 for of 循环',
+            //   link: '/01.WEB/Vue/迭代器与 for of 循环.md',
+            // },
+            // {
+            //   text: 'Promise 对象',
+            //   link: '/01.WEB/Vue/Promise 对象.md',
+            // },
+            // {
+            //   text: 'Generator 函数',
+            //   link: '/01.WEB/Vue/Generator 函数.md',
+            // },
+            // {
+            //   text: 'Generator 函数的异步应用',
+            //   link: '/01.WEB/Vue/Generator 函数的异步应用.md',
+            // },
+            // {
+            //   text: 'Async 函数',
+            //   link: '/01.WEB/Vue/Async 函数.md',
+            // },
+            // {
+            //   text: 'Class 类的基本语法',
+            //   link: '/01.WEB/Vue/Class 类的基本语法.md',
+            // },
           ],
         },
       ],
@@ -164,6 +229,10 @@ export default defineUserConfig({
             {
               text: 'ES6',
               link: '/01.WEB/Jobs/ES6.md',
+            },
+            {
+              text: 'Vue',
+              link: '/01.WEB/Jobs/Vue.md',
             },
           ],
         },
