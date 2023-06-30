@@ -172,10 +172,10 @@ export default defineUserConfig({
               text: '04.虚拟DOM实现原理',
               link: '/01.WEB/Vue/04.虚拟DOM实现原理.md',
             },
-            // {
-            //   text: 'Symbol',
-            //   link: '/01.WEB/Vue/Symbol.md',
-            // },
+            {
+              text: '05.组合式 API ',
+              link: '/01.WEB/Vue/05.组合式 API .md',
+            },
             // {
             //   text: '迭代器与 for of 循环',
             //   link: '/01.WEB/Vue/迭代器与 for of 循环.md',

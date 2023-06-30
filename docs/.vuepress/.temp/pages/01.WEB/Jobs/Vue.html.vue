@@ -342,6 +342,7 @@ Vue 提供了 Vue.set (object, propertyName, value) 来实现为对象添加响�
 之所以需要这个编译过程是为了便于前端程序员能高效的编写视图模板。相比而言，我们还是更愿意用HTML来编写视图，直观且高效。手写render函数不仅效率底下，而且失去了编译期的优化能力。
 在Vue中编译器会先对template进行解析，这一步称为parse，结束之后会得到一个JS对象，我们成为抽象语法树AST，然后是对AST进行深加工的转换过程，这一步成为transform，最后将前面得到的AST生成为JS代码，也就是render函数。</p>
 <h3 id="_19、vue-项目可以进行哪些优化" tabindex="-1"><a class="header-anchor" href="#_19、vue-项目可以进行哪些优化" aria-hidden="true">#</a> 19、Vue 项目可以进行哪些优化？</h3>
+<h3 id="_19、实际工作中-你总结的vue最佳实践有哪些" tabindex="-1"><a class="header-anchor" href="#_19、实际工作中-你总结的vue最佳实践有哪些" aria-hidden="true">#</a> 19、实际工作中，你总结的vue最佳实践有哪些？</h3>
 <h2 id="二、vuex" tabindex="-1"><a class="header-anchor" href="#二、vuex" aria-hidden="true">#</a> 二、VueX</h2>
 <h3 id="_1、说一说你对vuex理解" tabindex="-1"><a class="header-anchor" href="#_1、说一说你对vuex理解" aria-hidden="true">#</a> 1、说一说你对vuex理解？</h3>
 <p>Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式 + 库。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。</p>

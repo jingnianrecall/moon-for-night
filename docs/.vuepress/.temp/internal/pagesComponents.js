@@ -15,10 +15,6 @@ export const pagesComponents = {
   "v-412963e0": defineAsyncComponent(() => import(/* webpackChunkName: "v-412963e0" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/pages/4e8444e2d534d14f/index.html.vue")),
   // path: /pages/922650/
   "v-a4e7f9da": defineAsyncComponent(() => import(/* webpackChunkName: "v-a4e7f9da" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/pages/922650/index.html.vue")),
-  // path: /01.WEB/HTML/
-  "v-54a8a515": defineAsyncComponent(() => import(/* webpackChunkName: "v-54a8a515" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/HTML/index.html.vue")),
-  // path: /01.WEB/HTML/Web%20Workers.html
-  "v-36d6de28": defineAsyncComponent(() => import(/* webpackChunkName: "v-36d6de28" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/HTML/Web Workers.html.vue")),
   // path: /01.WEB/ES6/Async%20%E5%87%BD%E6%95%B0.html
   "v-94d60128": defineAsyncComponent(() => import(/* webpackChunkName: "v-94d60128" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/ES6/Async 函数.html.vue")),
   // path: /01.WEB/ES6/Class%20%E7%B1%BB%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95.html
@@ -49,20 +45,10 @@ export const pagesComponents = {
   "v-a684a2d2": defineAsyncComponent(() => import(/* webpackChunkName: "v-a684a2d2" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/ES6/字符串的扩展.html.vue")),
   // path: /01.WEB/ES6/%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%20for%20of%20%E5%BE%AA%E7%8E%AF.html
   "v-73744fe9": defineAsyncComponent(() => import(/* webpackChunkName: "v-73744fe9" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/ES6/迭代器与 for of 循环.html.vue")),
-  // path: /01.WEB/Jobs/CSS.html
-  "v-73759480": defineAsyncComponent(() => import(/* webpackChunkName: "v-73759480" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/Jobs/CSS.html.vue")),
-  // path: /01.WEB/Jobs/ES6.html
-  "v-11bb643b": defineAsyncComponent(() => import(/* webpackChunkName: "v-11bb643b" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/Jobs/ES6.html.vue")),
-  // path: /01.WEB/Jobs/JavaScript.html
-  "v-2754273c": defineAsyncComponent(() => import(/* webpackChunkName: "v-2754273c" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/Jobs/JavaScript.html.vue")),
-  // path: /01.WEB/Jobs/
-  "v-54d16daa": defineAsyncComponent(() => import(/* webpackChunkName: "v-54d16daa" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/Jobs/index.html.vue")),
-  // path: /01.WEB/Jobs/Vue.html
-  "v-4e7702dd": defineAsyncComponent(() => import(/* webpackChunkName: "v-4e7702dd" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/Jobs/Vue.html.vue")),
-  // path: /01.WEB/Jobs/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html
-  "v-0c4f26d4": defineAsyncComponent(() => import(/* webpackChunkName: "v-0c4f26d4" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/Jobs/前端性能优化.html.vue")),
-  // path: /01.WEB/Jobs/%E9%97%AE%E9%A2%98.html
-  "v-d2a6ce32": defineAsyncComponent(() => import(/* webpackChunkName: "v-d2a6ce32" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/Jobs/问题.html.vue")),
+  // path: /01.WEB/HTML/
+  "v-54a8a515": defineAsyncComponent(() => import(/* webpackChunkName: "v-54a8a515" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/HTML/index.html.vue")),
+  // path: /01.WEB/HTML/Web%20Workers.html
+  "v-36d6de28": defineAsyncComponent(() => import(/* webpackChunkName: "v-36d6de28" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/HTML/Web Workers.html.vue")),
   // path: /01.WEB/JavaScript/01.%E7%AE%80%E4%BB%8B.html
   "v-9eacc8e8": defineAsyncComponent(() => import(/* webpackChunkName: "v-9eacc8e8" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/JavaScript/01.简介.html.vue")),
   // path: /01.WEB/JavaScript/JavaScript%E4%BD%9C%E7%94%A8%E5%9F%9F.html
@@ -83,6 +69,20 @@ export const pagesComponents = {
   "v-45cbdb3e": defineAsyncComponent(() => import(/* webpackChunkName: "v-45cbdb3e" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/JavaScript/继承与原型链.html.vue")),
   // path: /01.WEB/JavaScript/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html
   "v-72738f06": defineAsyncComponent(() => import(/* webpackChunkName: "v-72738f06" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/JavaScript/设计模式.html.vue")),
+  // path: /01.WEB/Jobs/CSS.html
+  "v-73759480": defineAsyncComponent(() => import(/* webpackChunkName: "v-73759480" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/Jobs/CSS.html.vue")),
+  // path: /01.WEB/Jobs/ES6.html
+  "v-11bb643b": defineAsyncComponent(() => import(/* webpackChunkName: "v-11bb643b" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/Jobs/ES6.html.vue")),
+  // path: /01.WEB/Jobs/JavaScript.html
+  "v-2754273c": defineAsyncComponent(() => import(/* webpackChunkName: "v-2754273c" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/Jobs/JavaScript.html.vue")),
+  // path: /01.WEB/Jobs/
+  "v-54d16daa": defineAsyncComponent(() => import(/* webpackChunkName: "v-54d16daa" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/Jobs/index.html.vue")),
+  // path: /01.WEB/Jobs/Vue.html
+  "v-4e7702dd": defineAsyncComponent(() => import(/* webpackChunkName: "v-4e7702dd" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/Jobs/Vue.html.vue")),
+  // path: /01.WEB/Jobs/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html
+  "v-0c4f26d4": defineAsyncComponent(() => import(/* webpackChunkName: "v-0c4f26d4" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/Jobs/前端性能优化.html.vue")),
+  // path: /01.WEB/Jobs/%E9%97%AE%E9%A2%98.html
+  "v-d2a6ce32": defineAsyncComponent(() => import(/* webpackChunkName: "v-d2a6ce32" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/Jobs/问题.html.vue")),
   // path: /01.WEB/Vue/01.Vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.html
   "v-5b2801e6": defineAsyncComponent(() => import(/* webpackChunkName: "v-5b2801e6" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/Vue/01.Vue生命周期.html.vue")),
   // path: /01.WEB/Vue/02.Vue%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F.html
@@ -91,6 +91,8 @@ export const pagesComponents = {
   "v-d3985ad4": defineAsyncComponent(() => import(/* webpackChunkName: "v-d3985ad4" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/Vue/03.Vue 中的响应性是如何工作的.html.vue")),
   // path: /01.WEB/Vue/04.%E8%99%9A%E6%8B%9FDOM%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86.html
   "v-49487e84": defineAsyncComponent(() => import(/* webpackChunkName: "v-49487e84" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/Vue/04.虚拟DOM实现原理.html.vue")),
+  // path: /01.WEB/Vue/05.%E7%BB%84%E5%90%88%E5%BC%8F%20API%20.html
+  "v-4ab24253": defineAsyncComponent(() => import(/* webpackChunkName: "v-4ab24253" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/Vue/05.组合式 API .html.vue")),
   // path: /01.WEB/Vue/
   "v-f239fb90": defineAsyncComponent(() => import(/* webpackChunkName: "v-f239fb90" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/Vue/index.html.vue")),
   // path: /01.WEB/Vue/Vue2%E5%92%8CVue3%E7%9A%84%E5%8C%BA%E5%88%AB.html
