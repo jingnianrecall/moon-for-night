@@ -165,16 +165,20 @@ export default defineUserConfig({
               link: '/01.WEB/Vue/02.Vue组件之间通信方式.md',
             },
             {
-              text: '03.Vue 中的响应性是如何工作的',
-              link: '/01.WEB/Vue/03.Vue 中的响应性是如何工作的.md',
+              text: '03.Vue 2中的响应式系统',
+              link: '/01.WEB/Vue/03.Vue 2中的响应式系统.md',
             },
             {
-              text: '04.虚拟DOM实现原理',
-              link: '/01.WEB/Vue/04.虚拟DOM实现原理.md',
+              text: '04.Vue 3中的响应式系统',
+              link: '/01.WEB/Vue/04.Vue 3中的响应式系统.md',
             },
             {
-              text: '05.组合式 API ',
-              link: '/01.WEB/Vue/05.组合式 API .md',
+              text: '05.虚拟DOM实现原理',
+              link: '/01.WEB/Vue/05.虚拟DOM实现原理.md',
+            },
+            {
+              text: '06.组合式 API ',
+              link: '/01.WEB/Vue/06.组合式 API .md',
             },
             // {
             //   text: '迭代器与 for of 循环',
