@@ -238,6 +238,10 @@ export default defineUserConfig({
               text: 'Vue',
               link: '/01.WEB/Jobs/Vue.md',
             },
+            {
+              text: 'CSS',
+              link: '/01.WEB/Jobs/CSS.md',
+            },
           ],
         },
       ],
