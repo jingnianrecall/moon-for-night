@@ -166,8 +166,34 @@ em是相对于其父元素来设置字体大小，这样就会存在一个问题
 <h3 id="_5、两栏布局的实现" tabindex="-1"><a class="header-anchor" href="#_5、两栏布局的实现" aria-hidden="true">#</a> 5、两栏布局的实现</h3>
 <h2 id="二、定位与浮动" tabindex="-1"><a class="header-anchor" href="#二、定位与浮动" aria-hidden="true">#</a> 二、定位与浮动</h2>
 <h3 id="为什么需要清除浮动-清除浮动的方式" tabindex="-1"><a class="header-anchor" href="#为什么需要清除浮动-清除浮动的方式" aria-hidden="true">#</a> 为什么需要清除浮动？清除浮动的方式</h3>
-<h3 id="对-bfc-的理解-如何创建-bfc" tabindex="-1"><a class="header-anchor" href="#对-bfc-的理解-如何创建-bfc" aria-hidden="true">#</a> 对 BFC 的理解, 如何创建 BFC</h3>
+<h4 id="浮动的定义" tabindex="-1"><a class="header-anchor" href="#浮动的定义" aria-hidden="true">#</a> 浮动的定义</h4>
+<p>非IE浏览器下，容器不设高度且子元素浮动时，容器高度不能被内容撑开。 此时，内容会溢出到容器外面而影响布局。这种现象被称为浮动（溢出）。</p>
+<h4 id="浮动的工作原理" tabindex="-1"><a class="header-anchor" href="#浮动的工作原理" aria-hidden="true">#</a> 浮动的工作原理：</h4>
+<ul>
+<li>浮动元素脱离文档流，不占据空间（引起“高度塌陷”现象）</li>
+<li>浮动元素碰到包含它的边框或者其他浮动元素的边框停留</li>
+</ul>
+<p>浮动元素可以左右移动，直到遇到另一个浮动元素或者遇到它外边缘的包含框。浮动框不属于文档流中的普通流，当元素浮动之后，不会影响块级元素的布局，只会影响内联元素布局。此时文档流中的普通流就会表现得该浮动框不存在一样的布局模式。当包含框的高度小于浮动框的时候，此时就会出现“高度塌陷”。</p>
+<h4 id="浮动元素引起的问题" tabindex="-1"><a class="header-anchor" href="#浮动元素引起的问题" aria-hidden="true">#</a> 浮动元素引起的问题？</h4>
+<p>父元素的高度无法被撑开，影响与父元素同级的元素
+与浮动元素同级的非浮动元素会跟随其后
+若浮动的元素不是第一个元素，则该元素之前的元素也要浮动，否则会影响页面的显示结构</p>
+<h4 id="清除浮动的方式如下" tabindex="-1"><a class="header-anchor" href="#清除浮动的方式如下" aria-hidden="true">#</a> 清除浮动的方式如下：</h4>
+<ul>
+<li>利用clear样式</li>
+<li>给父级div定义height属性,最后一个浮动元素之后添加一个空的 div 标签，并添加 <code v-pre>clear:both</code> 样式</li>
+<li>包含浮动元素的父级标签添加 <code v-pre>overflow:hidden</code> 或者 <code v-pre>overflow:auto</code> (overflow的作用就是为了构建一个BFC区域，让内部浮动的影响都得以“内化”。)</li>
+<li>使用 :after 伪元素。由于IE6-7不支持 :after，使用 zoom:1 触发 hasLayout**</li>
+</ul>
 <h3 id="使用-clear-属性清除浮动的原理" tabindex="-1"><a class="header-anchor" href="#使用-clear-属性清除浮动的原理" aria-hidden="true">#</a> 使用 clear 属性清除浮动的原理</h3>
+<p>使用clear属性清除浮动语法： clear:none|left|right|both</p>
+<p>单看字面意思，clear:left 是“清除左浮动”，clear:right 是“清除右浮动”，实际上，这种解释是有问题的，因为浮动一直还在，并没有清除。
+官方对clear属性解释：<strong>“元素盒子的边不能和前面的浮动元素相邻”</strong>，对元素设置clear属性是为了避免浮动元素对该元素的影响，而不是清除掉浮动。</p>
+<p>还需要注意 clear 属性指的是元素盒子的边不能和前面的浮动元素相邻，注意这里“前面的”3个字，也就是clear属性对“后面的”浮动元素是不闻不问的。考虑到float属性要么是left，要么是right，不可能同时存在，同时由于clear属性对“后面的”浮动元素不闻不问，因此，当clear:left有效的时候，clear:right必定无效，也就是此时clear:left等同于设置clear:both；同样地，clear:right如果有效也是等同于设置clear:both。由此可见，clear:left和clear:right这两个声明就没有任何使用的价值，至少在CSS世界中是如此，直接使用clear:both吧。</p>
+<p>一般使用伪元素的方式清除浮动：</p>
+<div class="language-css line-numbers-mode" data-ext="css"><pre v-pre class="language-css"><code><span class="token selector">.clear::after</span><span class="token punctuation">{</span> <span class="token property">content</span><span class="token punctuation">:</span><span class="token string">''</span><span class="token punctuation">;</span> <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span> <span class="token property">clear</span><span class="token punctuation">:</span>both<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>clear属性只有块级元素才有效的，而::after等伪元素默认都是内联水平，这就是借助伪元素清除浮动影响时需要设置display属性值的原因。</p>
+<h3 id="对-bfc-的理解-如何创建-bfc" tabindex="-1"><a class="header-anchor" href="#对-bfc-的理解-如何创建-bfc" aria-hidden="true">#</a> 对 BFC 的理解, 如何创建 BFC</h3>
 <h3 id="什么是-margin-重叠问题-如何解决" tabindex="-1"><a class="header-anchor" href="#什么是-margin-重叠问题-如何解决" aria-hidden="true">#</a> 什么是 margin 重叠问题？如何解决</h3>
 <h3 id="position-的属性有哪些-区别是什么" tabindex="-1"><a class="header-anchor" href="#position-的属性有哪些-区别是什么" aria-hidden="true">#</a> position 的属性有哪些，区别是什么</h3>
 <h3 id="display、float、position的关系" tabindex="-1"><a class="header-anchor" href="#display、float、position的关系" aria-hidden="true">#</a> display、float、position的关系</h3>

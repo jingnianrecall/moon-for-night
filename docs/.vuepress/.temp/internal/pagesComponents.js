@@ -15,10 +15,6 @@ export const pagesComponents = {
   "v-412963e0": defineAsyncComponent(() => import(/* webpackChunkName: "v-412963e0" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/pages/4e8444e2d534d14f/index.html.vue")),
   // path: /pages/922650/
   "v-a4e7f9da": defineAsyncComponent(() => import(/* webpackChunkName: "v-a4e7f9da" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/pages/922650/index.html.vue")),
-  // path: /01.WEB/HTML/
-  "v-54a8a515": defineAsyncComponent(() => import(/* webpackChunkName: "v-54a8a515" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/HTML/index.html.vue")),
-  // path: /01.WEB/HTML/Web%20Workers.html
-  "v-36d6de28": defineAsyncComponent(() => import(/* webpackChunkName: "v-36d6de28" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/HTML/Web Workers.html.vue")),
   // path: /01.WEB/ES6/Async%20%E5%87%BD%E6%95%B0.html
   "v-94d60128": defineAsyncComponent(() => import(/* webpackChunkName: "v-94d60128" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/ES6/Async 函数.html.vue")),
   // path: /01.WEB/ES6/Class%20%E7%B1%BB%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95.html
@@ -49,6 +45,10 @@ export const pagesComponents = {
   "v-a684a2d2": defineAsyncComponent(() => import(/* webpackChunkName: "v-a684a2d2" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/ES6/字符串的扩展.html.vue")),
   // path: /01.WEB/ES6/%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%20for%20of%20%E5%BE%AA%E7%8E%AF.html
   "v-73744fe9": defineAsyncComponent(() => import(/* webpackChunkName: "v-73744fe9" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/ES6/迭代器与 for of 循环.html.vue")),
+  // path: /01.WEB/HTML/
+  "v-54a8a515": defineAsyncComponent(() => import(/* webpackChunkName: "v-54a8a515" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/HTML/index.html.vue")),
+  // path: /01.WEB/HTML/Web%20Workers.html
+  "v-36d6de28": defineAsyncComponent(() => import(/* webpackChunkName: "v-36d6de28" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/HTML/Web Workers.html.vue")),
   // path: /01.WEB/JavaScript/01.%E7%AE%80%E4%BB%8B.html
   "v-9eacc8e8": defineAsyncComponent(() => import(/* webpackChunkName: "v-9eacc8e8" */"D:/zym/diy/moon-for-night/docs/.vuepress/.temp/pages/01.WEB/JavaScript/01.简介.html.vue")),
   // path: /01.WEB/JavaScript/JavaScript%E4%BD%9C%E7%94%A8%E5%9F%9F.html
