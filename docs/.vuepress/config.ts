@@ -227,6 +227,14 @@ export default defineUserConfig({
           children: [
             // SidebarItem
             {
+              text: 'HTML',
+              link: '/01.WEB/Jobs/HTML.md',
+            },
+            {
+              text: 'CSS',
+              link: '/01.WEB/Jobs/CSS.md',
+            },
+            {
               text: 'JavaScript',
               link: '/01.WEB/Jobs/JavaScript.md',
             },
@@ -239,8 +247,8 @@ export default defineUserConfig({
               link: '/01.WEB/Jobs/Vue.md',
             },
             {
-              text: 'CSS',
-              link: '/01.WEB/Jobs/CSS.md',
+              text: '计算机网络',
+              link: '/01.WEB/Jobs/计算机网络.md',
             },
           ],
         },

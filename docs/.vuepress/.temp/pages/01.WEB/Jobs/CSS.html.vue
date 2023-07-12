@@ -89,6 +89,14 @@ visibility:hidden是继承属性，子孙节点消失是由于继承了hidden，
 <span class="token property">-webkit-box-orient</span><span class="token punctuation">:</span>vertical<span class="token punctuation">;</span>        // 设置伸缩盒子的子元素排列方式：从上到下垂直排列
 <span class="token property">-webkit-line-clamp</span><span class="token punctuation">:</span>3<span class="token punctuation">;</span>               // 显示的行数
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>注意：由于上面的三个属性都是 CSS3 的属性，没有浏览器可以兼容，所以要在前面加一个 <code v-pre>-webkit-</code> 来兼容一部分浏览器。</p>
+<h3 id="_7、link和-import的区别" tabindex="-1"><a class="header-anchor" href="#_7、link和-import的区别" aria-hidden="true">#</a> 7、link和@import的区别</h3>
+<p>两者都是外部引用CSS的方式，它们的区别如下：</p>
+<ul>
+<li>link是XHTML标签，除了加载CSS外，还可以定义RSS等其他事务；@import属于CSS范畴，只能加载CSS。</li>
+<li>link引用CSS时，在页面载入时同时加载；@import需要页面网页完全载入以后加载。</li>
+<li>link是XHTML标签，无兼容问题；@import是在CSS2.1提出的，低版本的浏览器不支持。</li>
+<li>link支持使用Javascript控制DOM去改变样式；而@import不支持。</li>
+</ul>
 <h2 id="二、页面布局" tabindex="-1"><a class="header-anchor" href="#二、页面布局" aria-hidden="true">#</a> 二、页面布局</h2>
 <h3 id="_1、水平垂直居中的实现" tabindex="-1"><a class="header-anchor" href="#_1、水平垂直居中的实现" aria-hidden="true">#</a> 1、水平垂直居中的实现</h3>
 <p>利用绝对定位，先将元素的左上角通过top:50%和left:50%定位到页面的中心，然后再通过translate来调整元素的中心点到页面的中心。该方法需要考虑浏览器兼容问题。</p>
@@ -180,28 +188,145 @@ em是相对于其父元素来设置字体大小，这样就会存在一个问题
 若浮动的元素不是第一个元素，则该元素之前的元素也要浮动，否则会影响页面的显示结构</p>
 <h4 id="清除浮动的方式如下" tabindex="-1"><a class="header-anchor" href="#清除浮动的方式如下" aria-hidden="true">#</a> 清除浮动的方式如下：</h4>
 <ul>
-<li>利用clear样式</li>
+<li>利用 clear 样式</li>
 <li>给父级div定义height属性,最后一个浮动元素之后添加一个空的 div 标签，并添加 <code v-pre>clear:both</code> 样式</li>
 <li>包含浮动元素的父级标签添加 <code v-pre>overflow:hidden</code> 或者 <code v-pre>overflow:auto</code> (overflow的作用就是为了构建一个BFC区域，让内部浮动的影响都得以“内化”。)</li>
 <li>使用 :after 伪元素。由于IE6-7不支持 :after，使用 zoom:1 触发 hasLayout**</li>
 </ul>
 <h3 id="使用-clear-属性清除浮动的原理" tabindex="-1"><a class="header-anchor" href="#使用-clear-属性清除浮动的原理" aria-hidden="true">#</a> 使用 clear 属性清除浮动的原理</h3>
-<p>使用clear属性清除浮动语法： clear:none|left|right|both</p>
+<p>使用 clear 属性清除浮动语法： clear:none|left|right|both</p>
 <p>单看字面意思，clear:left 是“清除左浮动”，clear:right 是“清除右浮动”，实际上，这种解释是有问题的，因为浮动一直还在，并没有清除。
 官方对clear属性解释：<strong>“元素盒子的边不能和前面的浮动元素相邻”</strong>，对元素设置clear属性是为了避免浮动元素对该元素的影响，而不是清除掉浮动。</p>
-<p>还需要注意 clear 属性指的是元素盒子的边不能和前面的浮动元素相邻，注意这里“前面的”3个字，也就是clear属性对“后面的”浮动元素是不闻不问的。考虑到float属性要么是left，要么是right，不可能同时存在，同时由于clear属性对“后面的”浮动元素不闻不问，因此，当clear:left有效的时候，clear:right必定无效，也就是此时clear:left等同于设置clear:both；同样地，clear:right如果有效也是等同于设置clear:both。由此可见，clear:left和clear:right这两个声明就没有任何使用的价值，至少在CSS世界中是如此，直接使用clear:both吧。</p>
+<p>还需要注意 <code v-pre>clear</code> 属性指的是元素盒子的边不能和前面的浮动元素相邻，注意这里“前面的”3个字，也就是 <code v-pre>clear</code> 属性对“后面的”浮动元素是不闻不问的。考虑到 float 属性要么是 <code v-pre>left</code>，要么是 <code v-pre>right</code>，不可能同时存在，同时由于 <code v-pre>clear</code> 属性对“后面的”浮动元素不闻不问，因此，当<code v-pre>clear:left</code>有效的时候，<code v-pre>clear:right</code> 必定无效，也就是此时 <code v-pre>clear:left</code> 等同于设置 <code v-pre>clear:both</code>；同样地，<code v-pre>clear:right</code> 如果有效也是等同于设置 <code v-pre>clear:both</code> 。由此可见，<code v-pre>clear:left</code> 和 <code v-pre>clear:right</code> 这两个声明就没有任何使用的价值，至少在CSS世界中是如此，直接使用 <code v-pre>clear:both</code> 吧。</p>
 <p>一般使用伪元素的方式清除浮动：</p>
 <div class="language-css line-numbers-mode" data-ext="css"><pre v-pre class="language-css"><code><span class="token selector">.clear::after</span><span class="token punctuation">{</span> <span class="token property">content</span><span class="token punctuation">:</span><span class="token string">''</span><span class="token punctuation">;</span> <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span> <span class="token property">clear</span><span class="token punctuation">:</span>both<span class="token punctuation">;</span> <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>clear属性只有块级元素才有效的，而::after等伪元素默认都是内联水平，这就是借助伪元素清除浮动影响时需要设置display属性值的原因。</p>
 <h3 id="对-bfc-的理解-如何创建-bfc" tabindex="-1"><a class="header-anchor" href="#对-bfc-的理解-如何创建-bfc" aria-hidden="true">#</a> 对 BFC 的理解, 如何创建 BFC</h3>
+<p>先来看两个相关的概念：</p>
+<ul>
+<li>
+<p>Box: Box 是 CSS 布局的对象和基本单位，⼀个⻚⾯是由很多个 Box 组成的，这个Box就是我们所说的盒模型。
+Formatting context：块级上下⽂格式化，它是⻚⾯中的⼀块渲染区域，并且有⼀套渲染规则，它决定了其⼦元素将如何定位，以及和其他元素的关系和相互作⽤。</p>
+</li>
+<li>
+<p>块格式化上下文（Block Formatting Context，BFC）是Web页面的可视化CSS渲染的一部分，是布局过程中生成块级盒子的区域，也是浮动元素与其他元素的交互限定区域。</p>
+</li>
+</ul>
+<p>通俗来讲：<strong>BFC是一个独立的布局环境，可以理解为一个容器，在这个容器中按照一定规则进行物品摆放，并且不会影响其它环境中的物品。</strong> 如果一个元素符合触发 <code v-pre>BFC</code> 的条件，则 <code v-pre>BFC</code> 中的元素布局不受外部影响。</p>
+<h4 id="创建bfc的条件" tabindex="-1"><a class="header-anchor" href="#创建bfc的条件" aria-hidden="true">#</a> 创建BFC的条件：</h4>
+<ul>
+<li>根元素：body；</li>
+<li>元素设置浮动：float 除 none 以外的值；</li>
+<li>元素设置绝对定位：position (absolute、fixed)；</li>
+<li>display 值为：inline-block、table-cell、table-caption、flex等；</li>
+<li>overflow 值为：hidden、auto、scroll；</li>
+</ul>
+<h4 id="bfc的特点" tabindex="-1"><a class="header-anchor" href="#bfc的特点" aria-hidden="true">#</a> BFC的特点：</h4>
+<ul>
+<li>垂直方向上，自上而下排列，和文档流的排列方式一致。</li>
+<li>在BFC中上下相邻的两个容器的margin会重叠</li>
+<li>计算BFC的高度时，需要计算浮动元素的高度</li>
+<li>BFC区域不会与浮动的容器发生重叠</li>
+<li>BFC是独立的容器，容器内部元素不会影响外部元素</li>
+<li>每个元素的左margin值和容器的左border相接触</li>
+</ul>
+<h4 id="bfc的作用" tabindex="-1"><a class="header-anchor" href="#bfc的作用" aria-hidden="true">#</a> BFC的作用：</h4>
+<ul>
+<li><strong>解决margin的重叠问题</strong>：由于BFC是一个独立的区域，内部的元素和外部的元素互不影响，将两个元素变为两个BFC，就解决了margin重叠的问题。</li>
+<li><strong>解决高度塌陷的问题</strong>：在对子元素设置浮动后，父元素会发生高度塌陷，也就是父元素的高度变为0。解决这个问题，只需要把父元素变成一个BFC。常用的办法是给父元素设置overflow:hidden。</li>
+<li><strong>创建自适应两栏布局</strong>：可以用来创建自适应两栏布局：左边的宽度固定，右边的宽度自适应。</li>
+</ul>
+<div class="language-css line-numbers-mode" data-ext="css"><pre v-pre class="language-css"><code><span class="token selector">.left</span><span class="token punctuation">{</span>
+     <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+     <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+     <span class="token property">background</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+     <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+ <span class="token selector">.right</span><span class="token punctuation">{</span>
+     <span class="token property">height</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+     <span class="token property">background</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+     <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+ 
+&lt;div class=<span class="token string">"left"</span>>&lt;/div>
+&lt;div class=<span class="token string">"right"</span>>&lt;/div>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>左侧设置float:left，右侧设置overflow: hidden。这样右边就触发了BFC，BFC的区域不会与浮动元素发生重叠，所以两侧就不会发生重叠，实现了自适应两栏布局。</p>
 <h3 id="什么是-margin-重叠问题-如何解决" tabindex="-1"><a class="header-anchor" href="#什么是-margin-重叠问题-如何解决" aria-hidden="true">#</a> 什么是 margin 重叠问题？如何解决</h3>
+<h4 id="问题描述" tabindex="-1"><a class="header-anchor" href="#问题描述" aria-hidden="true">#</a> 问题描述：</h4>
+<p>两个块级元素的上外边距和下外边距可能会合并（折叠）为一个外边距，其大小会取其中外边距值大的那个，这种行为就是外边距折叠。需要注意的是，<strong>浮动的元素和绝对定位</strong>这种脱离文档流的元素的外边距不会折叠。重叠只会出现在<strong>垂直方向</strong>。</p>
+<h4 id="解决办法" tabindex="-1"><a class="header-anchor" href="#解决办法" aria-hidden="true">#</a> 解决办法：</h4>
+<p>对于折叠的情况，主要有两种：<strong>兄弟之间重叠</strong>和<strong>父子之间重叠</strong></p>
+<p>（1）兄弟之间重叠</p>
+<ul>
+<li>底部元素变为行内盒子：<code v-pre>display: inline-block</code></li>
+<li>底部元素设置浮动：<code v-pre>float</code></li>
+<li>底部元素的position的值为<code v-pre>absolute/fixed</code></li>
+</ul>
+<p>（2）父子之间重叠</p>
+<ul>
+<li>父元素加入：<code v-pre>overflow: hidden</code></li>
+<li>父元素添加透明边框：<code v-pre>border:1px solid transparent</code></li>
+<li>子元素变为行内盒子：<code v-pre>display: inline-block</code></li>
+<li>子元素加入浮动属性或定位</li>
+</ul>
 <h3 id="position-的属性有哪些-区别是什么" tabindex="-1"><a class="header-anchor" href="#position-的属性有哪些-区别是什么" aria-hidden="true">#</a> position 的属性有哪些，区别是什么</h3>
+<h4 id="position有以下属性值" tabindex="-1"><a class="header-anchor" href="#position有以下属性值" aria-hidden="true">#</a> position有以下属性值：</h4>
+<ul>
+<li>
+<p>absolute生成绝对定位的元素，相对于static定位以外的一个父元素进行定位。元素的位置通过left、top、right、bottom属性进行规定。</p>
+</li>
+<li>
+<p>relative生成相对定位的元素，相对于其原来的位置进行定位。元素的位置通过left、top、right、bottom属性进行规定。</p>
+</li>
+<li>
+<p>fixed生成绝对定位的元素，指定元素相对于屏幕视⼝（viewport）的位置来指定元素位置。元素的位置在屏幕滚动时不会改变，⽐如回到顶部的按钮⼀般都是⽤此定位⽅式。</p>
+</li>
+<li>
+<p>static默认值，没有定位，元素出现在正常的文档流中，会忽略 top, bottom, left, right 或者 z-index 声明，块级元素从上往下纵向排布，⾏级元素从左向右排列。</p>
+</li>
+<li>
+<p>inherit规定从父元素继承position属性的值</p>
+</li>
+</ul>
+<h4 id="前面三者的定位方式如下" tabindex="-1"><a class="header-anchor" href="#前面三者的定位方式如下" aria-hidden="true">#</a> 前面三者的定位方式如下：</h4>
+<p>relative： 元素的定位永远是相对于元素自身位置的，和其他元素没关系，也不会影响其他元素。</p>
+<p>fixed： 元素的定位是相对于 window （或者 iframe）边界的，和其他元素没有关系。但是它具有破坏性，会导致其他元素位置的变化。</p>
+<p>absolute： 元素的定位相对于前两者要复杂许多。如果为 absolute 设置了 top、left，浏览器会根据什么去确定它的纵向和横向的偏移量呢？
+答案是浏览器会递归查找该元素的所有父元素，如果找到一个设置了 <code v-pre>position:relative/absolute/fixed</code> 的元素，就以该元素为基准定位，如果没找到，就以浏览器边界定位。如下两个图所示：</p>
 <h3 id="display、float、position的关系" tabindex="-1"><a class="header-anchor" href="#display、float、position的关系" aria-hidden="true">#</a> display、float、position的关系</h3>
-<h2 id="二、定位与浮动-1" tabindex="-1"><a class="header-anchor" href="#二、定位与浮动-1" aria-hidden="true">#</a> 二、定位与浮动</h2>
+<p>（1）首先判断display属性是否为none，如果为none，则position和float属性的值不影响元素最后的表现。</p>
+<p>（2）然后判断position的值是否为absolute或者fixed，如果是，则float属性失效，并且display的值应该被设置为table或者block，具体转换需要看初始转换值。</p>
+<p>（3）如果position的值不为absolute或者fixed，则判断float属性的值是否为none，如果不是，则display的值则按上面的规则转换。注意，如果position的值为relative并且float属性的值存在，则relative相对于浮动后的最终位置定位。</p>
+<p>（4）如果float的值为none，则判断元素是否为根元素，如果是根元素则display属性按照上面的规则转换，如果不是，则保持指定的display属性值不变。
+总的来说，可以把它看作是一个类似优先级的机制，&quot;position:absolute&quot;和&quot;position:fixed&quot;优先级最高，有它存在的时候，浮动不起作用，'display'的值也需要调整；其次，元素的'float'特性的值不是&quot;none&quot;的时候或者它是根元素的时候，调整'display'的值；最后，非根元素，并且非浮动元素，并且非绝对定位的元素，'display'特性值同设置值。</p>
+<h2 id="三、场景应用" tabindex="-1"><a class="header-anchor" href="#三、场景应用" aria-hidden="true">#</a> 三、场景应用</h2>
 <h3 id="实现一个三角形" tabindex="-1"><a class="header-anchor" href="#实现一个三角形" aria-hidden="true">#</a> 实现一个三角形</h3>
-<h3 id="如何解决-1px-问题" tabindex="-1"><a class="header-anchor" href="#如何解决-1px-问题" aria-hidden="true">#</a> 如何解决 1px 问题？</h3>
+<p>CSS绘制三角形主要用到的是border属性，也就是边框。
+平时在给盒子设置边框时，往往都设置很窄，就可能误以为边框是由矩形组成的。实际上，border属性是右三角形组成的，下面看一个例子：</p>
+<div class="language-css line-numbers-mode" data-ext="css"><pre v-pre class="language-css"><code><span class="token selector">div</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 100px solid<span class="token punctuation">;</span>
+    <span class="token property">border-color</span><span class="token punctuation">:</span> orange blue red green<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="如何解决-1px-问题" tabindex="-1"><a class="header-anchor" href="#如何解决-1px-问题" aria-hidden="true">#</a> 如何解决 1px 问题？</h3>
+<p>1px 问题指的是：在一些 Retina屏幕 的机型上，移动端页面的 1px 会变得很粗，呈现出不止 1px 的效果。原因很简单——CSS 中的 1px 并不能和移动设备上的 1px 划等号。它们之间的比例关系有一个专门的属性来描述：</p>
+<div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code>window<span class="token punctuation">.</span>devicePixelRatio <span class="token operator">=</span> 设备的物理像素 <span class="token operator">/</span> <span class="token constant">CSS</span>像素。
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>思路一：直接写 0.5px</p>
+<p>思路二：伪元素先放大后缩小</p>
+<p>思路三：viewport 缩放来解决</p>
 <h3 id="设置小于-12px-的字体" tabindex="-1"><a class="header-anchor" href="#设置小于-12px-的字体" aria-hidden="true">#</a> 设置小于 12px 的字体</h3>
+<p>在谷歌下css设置字体大小为12px及以下时，显示都是一样大小，都是默认12px。</p>
+<h4 id="解决办法-1" tabindex="-1"><a class="header-anchor" href="#解决办法-1" aria-hidden="true">#</a> 解决办法：</h4>
+<p>使用css3的transform缩放属性-webkit-transform:scale(0.5); 注意-webkit-transform:scale(0.75);收缩的是整个元素的大小，这时候，如果是内联元素，必须要将内联元素转换成块元素，可以使用display：block/inline-block/...；</p>
+<p>使用图片：如果是内容固定不变情况下，使用将小于12px文字内容切出做图片，这样不影响兼容也不影响美观。</p>
+<p>使用Webkit的内核的-webkit-text-size-adjust的私有CSS属性来解决，只要加了-webkit-text-size-adjust:none;字体大小就不受限制了。但是chrome更新到27版本之后就不可以用了。所以高版本chrome谷歌浏览器已经不再支持-webkit-text-size-adjust样式，所以要使用时候慎用。</p>
 <h3 id="画一条-0-5px-的线" tabindex="-1"><a class="header-anchor" href="#画一条-0-5px-的线" aria-hidden="true">#</a> 画一条 0.5px 的线</h3>
+<p>采用transform: scale()的方式，该方法用来定义元素的2D 缩放转换：</p>
+<div class="language-css line-numbers-mode" data-ext="css"><pre v-pre class="language-css"><code><span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span>0.5<span class="token punctuation">,</span>0.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>采用meta viewport的方式</p>
+<div class="language-css line-numbers-mode" data-ext="css"><pre v-pre class="language-css"><code>&lt;meta name=<span class="token string">"viewport"</span> content=<span class="token string">"width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5"</span>/>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>这样就能缩放到原来的0.5倍，如果是1px那么就会变成0.5px。viewport只针对于移动端，只在移动端上才能看到效果</p>
 </div></template>
 
 
